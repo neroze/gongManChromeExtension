@@ -1,0 +1,57 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Gong Man</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        width: 200px;
+        text-align: center;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+
+      button {
+         background: url('./icon.png');
+         height: 100px;
+         width: 100px;
+         border: 0;
+      }
+
+      ul {
+        display: inline;
+      }
+
+      #jumper-ext-button{
+        height: 80px;
+        width: 80px;
+        padding-top: 20px;
+      }
+
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+  <div id="status"> </div>
+    <ul>
+      <li><input class="gong" name="gong" value="0" type="radio">Gong 1</li>
+      <li><input class="gong" name="gong" value="1" type="radio">Gong 2</li>
+      <li><input class="gong" name="gong" value="2" type="radio">Gong 3</li>
+      <li><input class="gong" name="gong" value="3" checked="checked" type="radio">Gong 4</li>
+      <li><input class="gong" name="gong" value="4" type="radio">Gong 5</li>
+    </ul>
+    <img id="jumper-ext-button" src='./icon.png' type="button" />
+  </body>
+</html>
+
