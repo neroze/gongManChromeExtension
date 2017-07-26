@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // alert(gongID+" , " + gong[gongID] )
     var audio = new Audio(gong[gongID]);
     audio.play()
+    button.className = 'animated tada'
+
+    setTimeout(function(){
+    	button.className = ''
+    }, 1000)
   })
 });
 
