@@ -7,6 +7,7 @@ gong.push('https://sampleswap.org/samples-ghost/DRUMS%20and%20SINGLE%20HITS/gong
 
 document.addEventListener('DOMContentLoaded', function() {
   var button = document.getElementById("jumper-ext-button");
+  var list = document.getElementById("list");
 
   button.addEventListener('click', function(){
     var gongID = document.querySelector('.gong:checked').value;
@@ -14,9 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var audio = new Audio(gong[gongID]);
     audio.play()
     button.className = 'animated tada'
+    list.className = 'animated rubberBand'
 
     setTimeout(function(){
     	button.className = ''
+    	list.className = ''
     }, 1000)
   })
 });

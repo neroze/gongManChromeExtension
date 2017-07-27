@@ -12,15 +12,8 @@
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
-        width: 200px;
+        width: 250px;
         text-align: center;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
       }
 
       button {
@@ -30,8 +23,17 @@
          border: 0;
       }
 
-      ul {
-        display: inline;
+      ul#list {
+        position: relative;
+        list-style: none;
+        width: 100%;
+        padding-left: 10px;
+      }
+
+      ul#list > li {
+        border: 1px #CCC solid;
+        padding: 3px;
+        margin: 2px;
       }
 
       #jumper-ext-button{
@@ -41,19 +43,32 @@
         position: relative;
       }
 
+      .col-one {
+        width: 40%;
+        float: left;
+      }
+
+      .col-two {
+        width: 55%;
+        float: left;
+      }
+
     </style>
     <script src="popup.js"></script>
   </head>
   <body>
-  <div id="status"> </div>
-    <ul>
-      <li><input class="gong" name="gong" value="0" type="radio">Gong 1</li>
-      <li><input class="gong" name="gong" value="1" type="radio">Gong 2</li>
-      <li><input class="gong" name="gong" value="2" type="radio">Gong 3</li>
-      <li><input class="gong" name="gong" value="3" checked="checked" type="radio">Gong 4</li>
-      <li><input class="gong" name="gong" value="4" type="radio">Gong 5</li>
-    </ul>
-    <img id="jumper-ext-button" src='./icon.png' type="button" />
+    <div class="col-one">
+      <ul id="list">
+        <li><input class="gong" name="gong" value="0" type="radio">Gong 1</li>
+        <li><input class="gong" name="gong" value="1" type="radio">Gong 2</li>
+        <li><input class="gong" name="gong" value="2" type="radio">Gong 3</li>
+        <li><input class="gong" name="gong" value="3" checked="checked" type="radio">Gong 4</li>
+        <li><input class="gong" name="gong" value="4" type="radio">Gong 5</li>
+      </ul>
+    </div>
+    <div class="col-two">
+      <img id="jumper-ext-button" src='./icon.png' type="button" />
+    </div>
   </body>
 </html>
 
